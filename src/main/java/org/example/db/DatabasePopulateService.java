@@ -1,4 +1,4 @@
-package org.example.config;
+package org.example.db;
 
 import org.example.properties.PropertyReader;
 
@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class DatabaseInitService {
-    public void initDb(Database database) {
+public class DatabasePopulateService {
+    public void populateDb(Database database) {
         try {
-            String initDbFileName = PropertyReader.getInstance().getInitDbFilePath();
+            String populateDbFileName = PropertyReader.getInstance().getPopulateDbFilePath();
             String sql = String.join(
                     "\n",
-                    Files.readAllLines(Paths.get(initDbFileName))
+                    Files.readAllLines(Paths.get(populateDbFileName))
             );
             database.executeUpdate(sql);
         } catch (IOException e) {
@@ -23,7 +23,7 @@ public class DatabaseInitService {
     public static void main(String[] args) {
         Database database = Database.getInstance();
 
-        new DatabaseInitService().initDb(database);
+        new DatabasePopulateService().populateDb(database);
 
         database.closeConnection();
     }

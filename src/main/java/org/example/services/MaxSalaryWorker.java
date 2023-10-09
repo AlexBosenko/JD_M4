@@ -1,4 +1,4 @@
-package org.example.serviceclass;
+package org.example.services;
 
 public class MaxSalaryWorker {
     private final String name;

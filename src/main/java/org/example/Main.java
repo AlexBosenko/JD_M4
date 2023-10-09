@@ -1,10 +1,10 @@
 package org.example;
 
-import org.example.config.Database;
-import org.example.config.DatabaseInitService;
-import org.example.config.DatabasePopulateService;
-import org.example.config.DatabaseQueryService;
-import org.example.serviceclass.*;
+import org.example.db.Database;
+import org.example.db.DatabaseInitService;
+import org.example.db.DatabasePopulateService;
+import org.example.db.DatabaseQueryService;
+import org.example.services.*;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package org.example.config;
+package org.example.db;
 
 import org.example.properties.PropertyReader;
-import org.example.serviceclass.*;
+import org.example.services.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
